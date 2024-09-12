@@ -49,12 +49,11 @@
     <% 
         } 
     %>
-
     <!-- Form to submit the incremented value of i -->
     <form action="index.jsp" method="get">
         <!-- Hidden field to pass the updated value of i -->
         <input type="hidden" name="no" value="<%= i + 1 %>">
-        <input type="submit" value="Show/hide">
+        <input class="button" type="submit" value="Show/hide">
     </form>
 
 </body>

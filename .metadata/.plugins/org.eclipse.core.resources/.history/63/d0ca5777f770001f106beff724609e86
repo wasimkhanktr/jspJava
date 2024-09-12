@@ -1,0 +1,15 @@
+@charset "UTF-8";
+div{
+    border: 1px black solid;
+    width: 80vw;
+    margin: 5vw;
+    padding: 20px;
+}
+h1{
+    background-color: red;
+    color: white;
+}
+b{
+    background-color: pink;
+    color: white;
+}

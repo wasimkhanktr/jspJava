@@ -1,1 +1,40 @@
 @charset "UTF-8";
+body{
+    align-items: center;
+}
+div{
+    margin: 10px 10vw;
+    border: 3px black solid;
+    width: 80vw;
+    padding: 20px;
+    border-radius: 20px;
+}
+h1{
+    text-align: center;
+    background-color: red;
+    color: white;
+}
+b{
+    background-color: pink;
+    color: blue;
+}
+pre{
+    color: red;
+    background-color: yellow;
+}
+form{
+    text-align: center;
+}
+.button{
+    font-size: large;
+    font-weight: 600;
+    text-align: center;
+    background-color: green;
+    color: white;
+    height: 40px;
+    border-radius: 5px;
+}
+.button:hover{
+    background-color: aqua;
+    color: black;
+}
