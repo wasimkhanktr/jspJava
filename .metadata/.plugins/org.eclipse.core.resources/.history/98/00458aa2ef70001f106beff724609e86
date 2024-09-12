@@ -1,0 +1,71 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSP demo</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<% 
+    // Declaring a variable and a method inside scriptlet
+    int i = 0;
+
+    // Function to increment the value of i
+    int inc(int value) {
+        value++;
+        return value;
+    }
+
+    // Increment the value of i
+    i = inc(i);
+
+    // Check if i is even or odd
+    if (i % 2 == 0) {
+%>
+    <!-- This block will only be displayed if i is even -->
+    <div class="display">
+        <h1>JSP</h1>
+        <p><b>JSP</b> technology is used to create web application just like Servlet technology. It can be thought of as an extension to Servlet because it provides more functionality than servlet such as expression language, JSTL, etc.</p>
+        <p>A JSP page consists of HTML tags and JSP tags. The JSP pages are easier to maintain than Servlet because we can separate designing and development. It provides some additional features such as Expression Language, Custom Tags, etc.</p>
+        <h1>jsp tags</h1>
+        <ul>
+            <li>declaration tag</li>
+            <li>expression tag</li>
+            <li>scriptlet tag</li>
+            <li>directive tag</li>
+        </ul>
+        <p><b>scriptlet tag -> </b>The code placed within JSP expression tag is written to the output stream of the response. So you need not write out.print() to write data. It is mainly used to print the values of variable or method.
+            <pre>Syntax: <%= statement %></pre>
+        </p>
+        <p>
+            <b>JSP declaration tag - </b>
+            <p>The code written inside the jsp declaration tag is placed outside the service() method of auto-generated servlet.
+            <pre>Syntax: <%! field or method declaration %></pre>
+            </p>
+        </p>
+        <p>
+            <b>JSP directive: </b>
+            <p>Unlike the JSP directive, the jsp:include Action tag is different. Include directives contain resources at the time of translation, whereas include actions control resources at the request.
+            <pre>&lt;jsp:include&gt;</pre>
+            </p>
+        </p>
+    </div>
+<% 
+    } 
+%>
+
+<!-- Button to increment the counter -->
+<form method="post">
+    <button type="submit">Click to Increment</button>
+</form>
+
+<!-- Display the length of the name variable -->
+<%! String name = "Md Wasim Akram"; %>
+
+<p>Name length: <%= name.length() %></p>
+
+</body>
+</html>

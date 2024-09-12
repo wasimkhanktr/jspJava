@@ -1,0 +1,47 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSP demo</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <% 
+    int i = 2; // Default value of i
+    // Parse and assign the value from the request parameter if available
+    if (request.getParameter("no") != null) {
+        i = Integer.parseInt(request.getParameter("no"));
+    }
+    %>
+
+    <% 
+        // Check if i is even
+        if (i % 2 == 0) {
+    %>
+      <h1>Hello, the number is even.</h1>
+    <% 
+        } else {
+    %>
+      <h1>Hello, the number is odd.</h1>
+    <% 
+        } 
+    %>
+
+    <!-- Form to submit the incremented value of i -->
+    <form action="index.jsp" method="get">
+        <!-- Hidden field to pass the updated value of i -->
+        <input type="hidden" name="no" value="<%= i + 1 %>">
+        <input type="submit" value="Increment and Show">
+        <input type="reset" value="Reset">
+    </form>
+
+    <!-- Display the length of the name variable -->
+    <%! String name = "Md Wasim Akram"; %>
+
+    <p>Name length: <%= name.length() %></p>
+
+</body>
+</html>
